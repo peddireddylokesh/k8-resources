@@ -1,0 +1,12 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: nginx
+spec:
+# one pod can mutiple containers
+  containers:
+  - name: nginx
+    image: nginx
+    ports:
+    - containerPort: 80
+
