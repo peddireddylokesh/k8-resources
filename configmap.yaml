@@ -5,6 +5,6 @@ metadata:
 data: 
   course: "kubernetes"
   duration: "2 weeks"
-
+  trainer: "shiva"
 
 # Compare this snippet from k8-resources/secret.yaml:
