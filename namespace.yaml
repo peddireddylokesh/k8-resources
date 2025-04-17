@@ -1,0 +1,5 @@
+kind: namespace
+Apiversion: v1
+metadata: 
+  name: expense
+Spec:
