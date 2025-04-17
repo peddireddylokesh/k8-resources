@@ -21,11 +21,11 @@ kind: Pod
 metadata:
   name: backend-lb
   labels:
-      project: expense
-      component: backend
-      environment: dev
-      version: "1.0.0"
-      demo: lb
+    project: expense
+    component: backend
+    environment: dev
+    version: "1.0.0"
+    demo: lb
 spec:
   containers:
   - name: nginx
