@@ -12,6 +12,7 @@ spec:
     port: 80 # The port that the service will expose
     targetPort: 80 # The port on the container that the service will forward to
 ---
+apiVersion: v1
 kind: Pod
 metadata:
   name: backtend
