@@ -14,7 +14,7 @@ spec:
   - protocol: TCP
     port: 80 # The port that the service will expose
     targetPort: 80
-    nodeport: 30007 # The port on the container that the service will forward to
+    nodePort: 30007 # The port on the container that the service will forward to
 ---
 apiVersion: v1
 kind: Pod
