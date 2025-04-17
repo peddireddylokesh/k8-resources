@@ -1,13 +1,13 @@
-kind: Pod
 apiVersion: v1
+kind: Pod
 metadata:
   name: nginx
-  Namespace: expense
+  namespace: expense
 spec:
 # one pod can mutiple containers
   containers:
-  - name: nginx
-    image: nginx
-    ports:
-    - containerPort: 80
+    - name: nginx
+      image: nginx
+      ports:
+      - containerPort: 80
 
