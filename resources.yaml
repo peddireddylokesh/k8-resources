@@ -4,12 +4,12 @@ metadata:
   name: resources
 spec:
   containers:
-    - name: nginx
-      image: nginx
-      resources: #soft limits
-        requests:
-          memory: "68Mi"
-          cpu: "100m"
-        limits: #hard limits
-          memory: "128Mi"
-          cpu: "150m"
+  - name: nginx
+    image: nginx
+    resources: #soft limits
+      requests:
+        memory: "68Mi"
+        cpu: "100m"
+      limits: #hard limits
+        memory: "128Mi"
+        cpu: "150m"

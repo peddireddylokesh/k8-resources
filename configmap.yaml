@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap
+data: 
+  course: "kubernetes"
+  duration: "2 weeks"
+
+
+# Compare this snippet from k8-resources/secret.yaml:
