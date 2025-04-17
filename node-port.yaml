@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-nodeport
+spec:
+  type: NodePort # This is the key difference, it exposes the service on a port on each node
+  selector:
+    project: expense
+    component: backend
+    environment: dev 
+    version: "1.0.0" # labels are set as selectors here
+    demo: nodeport # labels are set as selectors here 
+  ports:
+  - protocol: TCP
+    port: 80 # The port that the service will expose
+    targetPort: 80 # The port on the container that the service will forward to
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: backtend-nodeport
+  labels:
+      project: expense
+      component: backend
+      environment: dev
+      version: "1.0.0"
+      demo: nodeport
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+   
