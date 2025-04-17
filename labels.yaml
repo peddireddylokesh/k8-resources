@@ -4,7 +4,7 @@ metadata:
   name: labels
   labels:
       project: expense
-      component: backtend
+      component: backend
       environment: dev
 spec:
   containers:

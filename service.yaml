@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     project: expense
-    component: backtend
+    component: backend
     environment: dev # labels are set as selectors here 
   ports:
   - protocol: TCP
@@ -18,7 +18,7 @@ metadata:
   name: backtend
   labels:
       project: expense
-      component: backtend
+      component: backend
       environment: dev
 spec:
   containers:
