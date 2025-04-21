@@ -19,7 +19,6 @@ metadata:
   labels:
     purpose: efs-static-demo
 spec:
-
   containers:
   - name: nginx
     image: nginx
