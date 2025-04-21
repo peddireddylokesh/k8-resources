@@ -6,11 +6,12 @@ spec:
   accessModes:
     - ReadWriteOnce
   storageClassName: ""
-  volumeMode: efs-static
+  volumeMode: Filesystem
   resources:
     requests:
       storage: 5Gi
 ---
+
 apiVersion: v1
 kind: Pod
 metadata:
@@ -18,6 +19,7 @@ metadata:
   labels:
     purpose: efs-static-demo
 spec:
+
   containers:
   - name: nginx
     image: nginx
