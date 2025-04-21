@@ -3,12 +3,13 @@ kind: PersistentVolume
 metadata:
   name: efs-static
 spec:
-  capacity:
-    storage: 5Gi
-  volumeMode: Filesystem
   accessModes:
     - ReadWriteMany
   storageClassName: ""
+  volumeMode: Filesystem
+  capacity:
+    storage: 5Gi
+  
   persistentVolumeReclaimPolicy: Retain
   csi:
     driver: efs.csi.aws.com
