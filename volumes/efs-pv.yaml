@@ -3,14 +3,14 @@ kind: PersistentVolume
 metadata:
   name: efs-static
 spec:
+  capacity:
+    storage: 5Gi
+    volumeMode: Filesystem
   accessModes:
     - ReadWriteMany
   storageClassName: ""
-  volumeMode: Filesystem
-  capacity:
-    storage: 5Gi
-  
+
   persistentVolumeReclaimPolicy: Retain
   csi:
     driver: efs.csi.aws.com
-    volumeHandle: fs-04fd7019fbab2765c # go to efs console and copy the file system id
+    volumeHandle: fs-08311260d858d799d # go to efs console and copy the file system id
