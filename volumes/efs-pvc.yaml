@@ -4,20 +4,19 @@ metadata:
   name: efs-static
 spec:
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   storageClassName: ""
-  volumeMode: Filesystem
+  volumeName: "efs-static"
   resources:
     requests:
       storage: 5Gi
 ---
-
 apiVersion: v1
 kind: Pod
 metadata:
   name: efs-static
   labels:
-    purpose: efs-static-demo
+    purpose: "efs-static-demo"
 spec:
   containers:
   - name: nginx
@@ -30,17 +29,16 @@ spec:
     persistentVolumeClaim:
       claimName: efs-static
 ---
-apiVersion: v1
 kind: Service
+apiVersion: v1
 metadata:
   name: nginx-lb
 spec:
-  type: LoadBalancer # This is the key difference, it exposes the service on a port on each node
-  selector:
-   purpose: efs-static-demo # labels are set as selectors here
+  type: LoadBalancer
+  selector: # labels are used as selectors
+    purpose: "efs-static-demo"
   ports:
   - protocol: TCP
-    port: 80 # The port that the service will expose
+    port: 80 # service port
     targetPort: 80
-    nodePort: 30007 # The port on the container that the service will forward to
----
+    nodePort: 30007
