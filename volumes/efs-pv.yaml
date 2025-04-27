@@ -13,3 +13,4 @@ spec:
   csi:
     driver: efs.csi.aws.com
     volumeHandle: vol-0f185bd6827db412e # go to efs console and copy the file system id it wii change every time when ur doing project
+    # check and update if you are using different file system
