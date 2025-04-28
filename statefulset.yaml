@@ -47,7 +47,7 @@ spec:
       name: www
     spec:
       accessModes: [ "ReadWriteOnce" ]
-      storageClassName: "my-storage-class"
+      storageClassName: "ebs-sc" # name of the storage class"
       resources:
         requests:
           storage: 1Gi
