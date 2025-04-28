@@ -12,5 +12,5 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   csi:
     driver: efs.csi.aws.com
-    volumeHandle: vol-03688ea13a9608063 # go to efs console and copy the file system id it wii change every time when ur doing project
+    volumeHandle: fs-04fe1b40efa17142d # go to efs console and copy the file system id it wii change every time when ur doing project
     # check and update if you are using different file system
